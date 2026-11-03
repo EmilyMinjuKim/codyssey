@@ -660,3 +660,147 @@ curl -i http://127.0.0.1:8082
 
 실제로 충돌을 처리했다면 오류 메시지, 점유 프로세스 또는 컨테이너,
 선택한 조치, 재검증 결과를 함께 기록한다.
+
+## 14. 볼륨 백업 및 데이터 손실 방지
+
+### 백업이 필요한 이유
+
+볼륨은 컨테이너 삭제와 독립적으로 유지되지만, 그 자체가 백업은 아니다.
+볼륨 삭제, 데이터 덮어쓰기, 호스트 장애 등에 대비하려면
+별도의 백업 파일을 만들고 복원 가능한지 검증해야 한다.
+
+아래는 `codyssey-data` 볼륨을 대상으로 한 백업·복원 절차와
+운영 계획이다. 기존 실습에서 백업까지 완료했다는 의미는 아니다.
+
+### 백업 주기와 보관 정책
+
+- 데이터를 변경한 작업일에는 작업 종료 후 1회 백업한다.
+- 볼륨 삭제, 초기화, 대규모 데이터 변경 전에는 추가 백업한다.
+- 날짜와 시간을 파일명에 포함하고 최근 7개 일일 백업을 보관한다.
+- 새 백업의 생성 및 복원 확인 후 오래된 백업을 정리한다.
+- 백업 파일을 외장 저장장치 또는 접근이 제한된 별도 저장소에도 복사한다.
+  같은 Mac에만 보관하면 Mac 자체의 장애에는 대비할 수 없다.
+- 자동 스케줄러는 아직 구성하지 않았다. 위 주기에 따라 수동 실행한다.
+- 백업 데이터는 공개 GitHub 저장소에 올리지 않는다.
+
+### 1단계: 원본과 데이터 변경 여부 확인
+
+Docker Desktop을 실행하고 아래 명령으로 원본 볼륨과
+이를 사용하는 실행 중인 컨테이너를 확인한다.
+
+```bash
+docker volume inspect codyssey-data
+docker ps --filter volume=codyssey-data
+```
+
+원본 볼륨이 없다면 중단하고 이름을 확인한다.
+이 상태에서 백업 명령을 계속 실행하면 빈 볼륨을 잘못 백업할 수 있다.
+
+백업 중 데이터가 변경되지 않도록 쓰기 작업을 중단한다.
+이번 실습의 `codyssey-vol2`는 `sleep infinity`만 실행하지만,
+일관된 백업을 위해 실행 중이라면 다음과 같이 중지한다.
+
+```bash
+docker stop codyssey-vol2
+```
+
+다른 컨테이너도 같은 볼륨에 쓰는 경우 해당 쓰기도 중단해야 한다.
+데이터베이스는 실행 중인 파일을 단순 복사하지 않고,
+정상 종료 또는 해당 DB가 제공하는 백업 기능을 사용한다.
+
+### 2단계: 날짜별 백업 파일 생성
+
+다음 명령은 같은 터미널 세션에서 순서대로 실행한다.
+
+```bash
+mkdir -p "$HOME/codyssey-backups"
+backup_name="codyssey-data-$(date +%Y%m%d-%H%M%S).tar.gz"
+
+docker run --rm \
+  --mount type=volume,source=codyssey-data,target=/data,readonly \
+  --mount "type=bind,source=$HOME/codyssey-backups,target=/backup" \
+  ubuntu:24.04 \
+  tar -czf "/backup/$backup_name" -C /data .
+```
+
+- 원본 볼륨은 읽기 전용으로 연결한다.
+- 백업 파일은 저장소 밖의 `~/codyssey-backups/`에 생성한다.
+- `--rm`은 작업 후 임시 컨테이너를 삭제하며, 원본 볼륨은 유지한다.
+- 명령이 오류로 끝나면 해당 파일을 정상 백업으로 취급하지 않는다.
+
+### 3단계: 백업 파일 확인
+
+```bash
+ls -lh "$HOME/codyssey-backups/$backup_name"
+tar -tzf "$HOME/codyssey-backups/$backup_name"
+shasum -a 256 "$HOME/codyssey-backups/$backup_name" \
+  > "$HOME/codyssey-backups/$backup_name.sha256"
+```
+
+파일 크기와 압축 목록을 확인하고 `proof.txt`가 포함되는지 확인한다.
+체크섬 파일은 복사·보관 중 파일이 변경되었는지 확인하는 데 사용한다.
+백업 파일과 체크섬 파일을 함께 별도 저장장치에 복사한다.
+
+### 4단계: 원본과 별도의 새 볼륨에 복원
+
+백업 파일의 체크섬을 먼저 검증한다.
+
+```bash
+shasum -a 256 -c "$HOME/codyssey-backups/$backup_name.sha256"
+```
+
+검증이 성공하면 사용하지 않는 새 볼륨 이름을 지정한다.
+동일 이름의 기존 볼륨이 있다면 다른 이름을 사용한다.
+
+```bash
+restore_volume="codyssey-restore-$(date +%Y%m%d-%H%M%S)"
+docker volume create "$restore_volume"
+
+docker run --rm \
+  --mount "type=volume,source=$restore_volume,target=/data" \
+  --mount "type=bind,source=$HOME/codyssey-backups,target=/backup,readonly" \
+  ubuntu:24.04 \
+  tar -xzf "/backup/$backup_name" -C /data
+```
+
+원본 `codyssey-data`에 직접 덮어쓰지 않고,
+별도의 볼륨으로 복원해 원본 데이터를 보호한다.
+
+### 5단계: 복원 데이터 검증 및 기존 컨테이너 재시작
+
+```bash
+docker run --rm \
+  --mount "type=volume,source=$restore_volume,target=/data,readonly" \
+  ubuntu:24.04 cat /data/proof.txt
+```
+
+예상 출력은 다음과 같다. 실제 실행 결과는 검증 후 별도로 기록한다.
+
+```text
+Volume data survives
+```
+
+원본과 복원본의 파일 내용이 같은지도 확인한다.
+
+```bash
+docker run --rm \
+  --mount type=volume,source=codyssey-data,target=/original,readonly \
+  --mount "type=volume,source=$restore_volume,target=/restored,readonly" \
+  ubuntu:24.04 \
+  sh -c 'diff /original/proof.txt /restored/proof.txt && echo "Restore verification passed"'
+```
+
+파일이 일치하면 `Restore verification passed`가 출력된다.
+이 비교는 이번 실습의 `proof.txt`를 검증하는 것이며,
+실제 서비스에서는 주요 파일 전체와 애플리케이션 동작도 확인해야 한다.
+
+백업 전에 실행 중이던 컨테이너를 중지했다면 다시 시작한다.
+
+```bash
+docker start codyssey-vol2
+```
+
+복원 확인 전에는 원본 볼륨이나 유일한 백업을 삭제하지 않는다.
+정기 백업 후에도 새 볼륨으로 복원하는 검증을 주기적으로 반복한다.
+
+참고: [Docker 공식 볼륨 백업·복원 문서](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes)
