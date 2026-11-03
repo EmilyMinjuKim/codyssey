@@ -58,7 +58,7 @@ git version 2.30.1 (Apple Git-130)
 | 완료 | Git 작성자·기본 브랜치·원격 저장소 설정 | [설정 증거](evidence/git-config.png) |
 | 완료 | VSCode에서 폴더 열기 및 GitHub 계정 로그인 | [VSCode 증거](evidence/vscode-github.png) |
 | 완료 | VSCode 소스 제어에서 저장소와 변경 파일 확인 | [소스 제어 증거](evidence/vscode-source-control.png) |
-| 확인 필요 | 최종 커밋 및 GitHub push | 업로드 후 확인 예정 |
+| 완료 | 최종 커밋 및 GitHub push | 로컬 HEAD와 원격 main의 커밋 값 일치 확인 |
 | 완료 | 트러블슈팅 2건 이상 | 9절 |
 
 원본 로그는 `script`로 수집했다. 터미널의 화면 제어 문자, 줄바꿈, 입력 수정 흔적, 중복 표시 및 실수로 붙여 넣은 출력이 포함되어 있다. 아래 코드블록은 실제 수행 명령과 핵심 결과를 읽기 쉽게 재구성한 발췌이며, 생략한 출력은 `...`로 표시한다. 실행 결과를 새로 생성한 것이 아니다. 이후의 **재현 절차**는 실제 기록과 구분한다.
@@ -390,7 +390,15 @@ VSCode 소스 제어에서 저장소와 변경 파일이 표시되는 것을 확
 
 ![VSCode 소스 제어 확인](evidence/vscode-source-control.png)
 
-최종 커밋과 GitHub push는 업로드 후 확인할 예정이다.
+최종 커밋을 GitHub에 업로드했다. 전송 중 HTTP 400 오류가 발생했으나, 아래 명령으로 재시도한 뒤 로컬 HEAD와 원격 main의 커밋 값이 일치하는 것을 확인했다.
+
+```bash
+git -c credential.helper= -c http.postBuffer=5242880 push origin main
+git rev-parse HEAD
+git -c credential.helper= ls-remote origin refs/heads/main
+```
+
+버퍼 변경 후 전송에 성공했지만, 오류의 정확한 원인까지 확정한 것은 아니다.
 
 ## 9. 트러블슈팅
 
