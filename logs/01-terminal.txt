@@ -1,0 +1,86 @@
+Script started on Tue Nov  3 17:04:20 2026
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mpwd[27m
+[7mls -la[27m[K[A[36C[27mp[27mw[27md[1B[27ml[27ms[27m [27m-[27ml[27ma[?2004l
+/Users/minjyuus/codyssey/codyssey
+total 8
+drwxr-xr-x   5 minjyuus  staff  160 Nov  3 17:04 .
+drwxr-xr-x   3 minjyuus  staff   96 Nov  3 16:58 ..
+drwxr-xr-x  12 minjyuus  staff  384 Nov  3 16:58 .git
+-rw-r--r--   1 minjyuus  staff   10 Nov  3 16:58 README.md
+drwxr-xr-x   3 minjyuus  staff   96 Nov  3 17:04 logs
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mmkdir terminal-p[7mr[7mactice[27m[K
+[7mcd terminal-practice[27m[K
+[7mpwd[27m[K[3A[39C[27mm[27mk[27md[27mi[27mr[27m [27mt[27me[27mr[27mm[27mi[27mn[27ma[27ml[27m-[27mpr[27ma[27mc[27mt[27mi[27mc[27me[1B[27mc[27md[27m [27mt[27me[27mr[27mm[27mi[27mn[27ma[27ml[27m-[27mp[27mr[27ma[27mc[27mt[27mi[27mc[27me[1B[27mp[27mw[27md[?2004l
+/Users/minjyuus/codyssey/codyssey/terminal-practice
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mtouch n[7mo[7mte.txt[27m[K
+[7mls -l note.txt[27m[K[A[A[37C[27mt[27mo[27mu[27mc[27mh[27m [27mno[27mt[27me[27m.[27mt[27mx[27mt[1B[27ml[27ms[27m [27m-[27ml[27m [27mn[27mo[27mt[27me[27m.[27mt[27mx[27mt[?2004l
+-rw-r--r--  1 minjyuus  staff  0 Nov  3 17:05 note.txt
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mecho "H[7me[7mllo, Codyssey!" > note.txt[27m[K
+[7mcat note.txt[27m[K[A[A[39C[27me[27mc[27mh[27mo[27m [27m"[27mHe[27ml[27ml[27mo[27m,[27m [27mC[27mo[27md[27my[27ms[27ms[27me[27my[27m![27m"[27m [27m>[27m [27mn[27mo[27mt[27me[27m.[27mt[27mx[27mt[1B[27mc[27ma[27mt[27m [27mn[27mo[27mt[27me[27m.[27mt[27mx[27mt[?2004l
+[0m[27m[24m[Jdquote> [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mecho 'H[7me[7mllo, Codyssey!' > note.txt[27m[K[A[24C[27me[27mc[27mh[27mo[27m [27m'[27mHe[27ml[27ml[27mo[27m,[27m [27mC[27mo[27md[27my[27ms[27ms[27me[27my[27m![27m'[27m [27m>[27m [27mn[27mo[27mt[27me[27m.[27mt[27mx[27mt[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mcat not[7me[7m.txt[27m[K[A[46C[27mc[27ma[27mt[27m [27mn[27mo[27mte[27m.[27mt[27mx[27mt[?2004l
+Hello, Codyssey!
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mcp note[7m.[7mtxt note-copy.txt[27m[K[A[33C[27mc[27mp[27m [27mn[27mo[27mt[27me.[27mt[27mx[27mt[27m [27mn[27mo[27mt[27me[27m-[27mc[27mo[27mp[27my[27m.[27mt[27mx[27mt[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mls -l[27m[27ml[27ms[27m [27m-[27ml[?2004l
+total 16
+-rw-r--r--  1 minjyuus  staff  17 Nov  3 17:07 note-copy.txt
+-rw-r--r--  1 minjyuus  staff  17 Nov  3 17:06 note.txt
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mmv note[7m-[7mcopy.txt renamed.txt[27m[K[A[30C[27mm[27mv[27m [27mn[27mo[27mt[27me-[27mc[27mo[27mp[27my[27m.[27mt[27mx[27mt[27m [27mr[27me[27mn[27ma[27mm[27me[27md[27m.[27mt[27mx[27mt[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mls -l[27m[27ml[27ms[27m [27m-[27ml[?2004l
+total 16
+-rw-r--r--  1 minjyuus  staff  17 Nov  3 17:06 note.txt
+-rw-r--r--  1 minjyuus  staff  17 Nov  3 17:07 renamed.txt
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mmkdir a[7mr[7mchive[27m[K[A[45C[27mm[27mk[27md[27mi[27mr[27m [27mar[27mc[27mh[27mi[27mv[27me[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mmv rena[7mm[7med.txt archive/[27m[K[A[35C[27mm[27mv[27m [27mr[27me[27mn[27mam[27me[27md[27m.[27mt[27mx[27mt[27m [27ma[27mr[27mc[27mh[27mi[27mv[27me[27m/[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mls -l a[7mr[7mchive[27m[K[A[45C[27ml[27ms[27m [27m-[27ml[27m [27mar[27mc[27mh[27mi[27mv[27me[?2004l
+total 8
+-rw-r--r--  1 minjyuus  staff  17 Nov  3 17:07 renamed.txt
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mrm arch[7mi[7mve/renamed.txt[27m[K[A[36C[27mr[27mm[27m [27ma[27mr[27mc[27mhi[27mv[27me[27m/[27mr[27me[27mn[27ma[27mm[27me[27md[27m.[27mt[27mx[27mt[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mls -la [7ma[7mrchive[27m[K[A[44C[27ml[27ms[27m [27m-[27ml[27ma[27m a[27mr[27mc[27mh[27mi[27mv[27me[?2004l
+total 0
+drwxr-xr-x  2 minjyuus  staff   64 Nov  3 17:08 .
+drwxr-xr-x  4 minjyuus  staff  128 Nov  3 17:07 ..
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mrmdir a[7mr[7mchive[27m[K[A[45C[27mr[27mm[27md[27mi[27mr[27m [27mar[27mc[27mh[27mi[27mv[27me[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004h[7mls -la[27m[27ml[27ms[27m [27m-[27ml[27ma[?2004l
+total 8
+drwxr-xr-x  3 minjyuus  staff   96 Nov  3 17:08 .
+drwxr-xr-x  6 minjyuus  staff  192 Nov  3 17:05 ..
+-rw-r--r--  1 minjyuus  staff   17 Nov  3 17:06 note.txt
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hㅔㅈ    ppwd[?2004l
+/Users/minjyuus/codyssey/codyssey/terminal-practice
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hlls -l n [Koote.ex  txt[?2004l
+-rw-r--r--  1 minjyuus  staff  17 Nov  3 17:06 note.txt
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hcchmood  [K6600 note.tt xt[?2004l
+zsh: command not found: chmood
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hcchmod 6 [K000 note.txt[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hlls -l n [Koote.tt xyt  t[?2004l
+-rw-------  1 minjyuus  staff  17 Nov  3 17:06 note.txt
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hccat not [Kee.txt[?2004l
+Hello, Codyssey!
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hcchmod 6 [K444 note.txt[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hlls -l n [Koote.txt[?2004l
+-rw-r--r--  1 minjyuus  staff  17 Nov  3 17:06 note.txt
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hmmkdir p [Keermission-demo[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hlls -d ld  [Kppermission demo[?2004l
+ls: demo: No such file or directory
+ls: permission: No such file or directory
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hlls[?2004l
+note.txt	permission-demo
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hlls -ld  [Kppermission-demo[?2004l
+drwxr-xr-x  2 minjyuus  staff  64 Nov  3 17:10 permission-demo
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hcchmod 7 [K000 permission-demo[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hlls -ld  [Kppermission-demo[1m/[0m[0m [?2004l
+drwx------  2 minjyuus  staff  64 Nov  3 17:10 permission-demo
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hcchmod 7 [K555 permission-demo[1m/[0m[0m [?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004hlls -ld  [Kppermission-demo[1m/[0m[0m [?2004l
+drwxr-xr-x  2 minjyuus  staff  64 Nov  3 17:10 permission-demo
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey/terminal-practice[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro terminal-practice % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...       3 completed.
+
+Script done on Tue Nov  3 17:12:23 2026

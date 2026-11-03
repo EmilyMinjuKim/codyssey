@@ -1,0 +1,271 @@
+Script started on Tue Nov  3 17:25:36 2026
+Restored session: Tue Nov  3 17:12:23 KST 2026
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker --version[27m [K[A[42C[27md[27mo[27mc[27mk[27me[27mr[27m [27m-[27m-[27mv[27me[27mr[27ms[27mi[27mo[27mn [K[?2004l
+zsh: command not found: docker
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mls -l /Applicati[7mo[7mns/Docker.app/Contents/Resources/bin/docker[27m[K[A[27ml[27ms[27m [27m-[27ml[27m [27m/[27mA[27mp[27mp[27ml[27mi[27mc[27ma[27mt[27mio[27mn[27ms[27m/[27mD[27mo[27mc[27mk[27me[27mr[27m.[27ma[27mp[27mp[27m/[27mC[27mo[27mn[27mt[27me[27mn[27mt[27ms[27m/[27mR[27me[27ms[27mo[27mu[27mr[27mc[27me[27ms[27m/[27mb[27mi[27mn[27m/[27md[27mo[27mc[27mk[27me[27mr[?2004l
+-rwxr-xr-x@ 1 minjyuus  staff  43052752 Oct 23 20:05 /Applications/Docker.app/Contents/Resources/bin/docker
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7m/Applications/Do[7mc[7mker.app/Contents/Resources/bin/docker --version[27m[K[A[27m/[27mA[27mp[27mp[27ml[27mi[27mc[27ma[27mt[27mi[27mo[27mn[27ms[27m/[27mD[27moc[27mk[27me[27mr[27m.[27ma[27mp[27mp[27m/[27mC[27mo[27mn[27mt[27me[27mn[27mt[27ms[27m/[27mR[27me[27ms[27mo[27mu[27mr[27mc[27me[27ms[27m/[27mb[27mi[27mn[27m/[27md[27mo[27mc[27mk[27me[27mr[27m [27m-[27m-[27mv[27me[27mr[27ms[27mi[27mo[27mn[?2004l
+Docker version 29.9.2, build a82e528
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mexport PATH="/Ap[7mp[7mlications/Docker.app/Contents/Resources/bin:$PATH"[27m[K[A[9D[27me[27mx[27mp[27mo[27mr[27mt[27m [27mP[27mA[27mT[27mH[27m=[27m"[27m/[27mA[27mpp[27ml[27mi[27mc[27ma[27mt[27mi[27mo[27mn[27ms[27m/[27mD[27mo[27mc[27mk[27me[27mr[27m.[27ma[27mp[27mp[27m/[27mC[27mo[27mn[27mt[27me[27mn[27mt[27ms[27m/[27mR[27me[27ms[27mo[27mu[27mr[27mc[27me[27ms[27m/[27mb[27mi[27mn[27m:[27m$[27mP[27mA[27mT[27mH[27m"[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker --version[27m [K[A[42C[27md[27mo[27mc[27mk[27me[27mr[27m [27m-[27m-[27mv[27me[27mr[27ms[27mi[27mo[27mn [K[?2004l
+Docker version 29.9.2, build a82e528
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker info[27m[11D[27md[27mo[27mc[27mk[27me[27mr[27m [27mi[27mn[27mf[27mo[?2004l
+Client:
+ Version:    29.9.2
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.152.0
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-agent
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.33.0
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.38.1
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.6.1
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.49.0
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  4.97.0
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-desktop
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.9
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-dhi
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.32
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.1
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.44.2
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-mcp
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.2.9
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-model
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.7.21
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-offload
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.3.2
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-pass
+  sandbox: "docker sandbox" is deprecated, use Docker Sandboxes instead (Docker Inc.)
+    Version:  v0.13.0
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-sandbox
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.27.0
+    Path:     /Users/minjyuus/.docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 29.9.2
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: local
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc version: v1.5.2-0-g29dd3dc2
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 7.0.14-linuxkit
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: aarch64
+ CPUs: 8
+ Total Memory: 3.825GiB
+ Name: docker-desktop
+ ID: 230023a1-7dec-4943-885a-6c08a900ab61
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///Users/minjyuus/Library/Containers/com.docker.docker/Data/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  127.0.0.0/8
+  ::1/128
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mecho 'export PAT[7mH[7m="/Applications/Docker.app/Contents/Resources/bin:$PATH"'[7m [7m>> ~/.zshrc[27m[K[A[A[30C[27me[27mc[27mh[27mo[27m [27m'[27me[27mx[27mp[27mo[27mr[27mt[27m [27mP[27mA[27mTH[27m=[27m"[27m/[27mA[27mp[27mp[27ml[27mi[27mc[27ma[27mt[27mi[27mo[27mn[27ms[27m/[27mD[27mo[27mc[27mk[27me[27mr[27m.[27ma[27mp[27mp[27m/[27mC[27mo[27mn[27mt[27me[27mn[27mt[27ms[27m/[27mR[27me[27ms[27mo[27mu[27mr[27mc[27me[27ms[27m/[27mb[27mi[27mn[27m:[27m$[27mP[27mA[27mT[27mH[27m"[27m' [27m>[27m>[27m [27m~[27m/[27m.[27mz[27ms[27mh[27mr[27mc[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mzsh -ic 'docker [7m-[7m-version'[27m[K[A[32C[27mz[27ms[27mh[27m [27m-[27mi[27mc[27m [27m'[27md[27mo[27mc[27mk[27me[27mr[27m -[27m-[27mv[27me[27mr[27ms[27mi[27mo[27mn[27m'[?2004l
+Docker version 29.9.2, build a82e528
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker run --nam[7me[7m codyssey-hello hello-world[27m[K[A[14C[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27m-[27mn[27ma[27mme[27m [27mc[27mo[27md[27my[27ms[27ms[27me[27my[27m-[27mh[27me[27ml[27ml[27mo[27m [27mh[27me[27ml[27ml[27mo[27m-[27mw[27mo[27mr[27ml[27md[?2004l
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+
+[1A[2K58dee6a49ef1: Pulling fs layer [1B[1A[2K58dee6a49ef1: Download complete [1B[1A[2K58dee6a49ef1: Pull complete [1B
+[1A[2Kc3bdf82c34d1: Download complete [1BDigest: sha256:c567b231f65614688711a75f31518a064258a51d442117a3e771a3a8fdba78ef
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker images[27m[13D[27md[27mo[27mc[27mk[27me[27mr[27m [27mi[27mm[27ma[27mg[27me[27ms[?2004l
+                                      [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m             [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m
+[34m[1mhello-world:latest[0m
+                  [39mc567b231f656[0m       [39m22.6kB[0m         [39m10.3kB[0m
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker ps[27m[9D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[?2004l
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker ps -a[27m[12D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[27m [27m-[27ma[?2004l
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+f645ea55703a   hello-world   "/hello"   43 seconds ago   Exited (0) 42 seconds ago             codyssey-hello
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker logs cody[7ms[7msey-hello[27m[K[A[32C[27md[27mo[27mc[27mk[27me[27mr[27m [27ml[27mo[27mg[27ms[27m [27mc[27mo[27md[27mys[27ms[27me[27my[27m-[27mh[27me[27ml[27ml[27mo[?2004l
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker run -it -[7m-[7mname codyssey-ubuntu ubuntu:24.04 bash[27m[K[A[3C[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27m--[27mn[27ma[27mm[27me[27m [27mc[27mo[27md[27my[27ms[27ms[27me[27my[27m-[27mu[27mb[27mu[27mn[27mt[27mu[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m:[27m2[27m4[27m.[27m0[27m4[27m [27mb[27ma[27ms[27mh[?2004l
+Unable to find image 'ubuntu:24.04' locally
+24.04: Pulling from library/ubuntu
+
+[1A[2Ke2d2bb84d022: Pulling fs layer [1B[1A[2Ke2d2bb84d022: Downloading  1.049MB/28.94MB[1B[1A[2Ke2d2bb84d022: Downloading  3.146MB/28.94MB[1B[1A[2Ke2d2bb84d022: Downloading  6.291MB/28.94MB[1B[1A[2Ke2d2bb84d022: Downloading  8.389MB/28.94MB[1B[1A[2Ke2d2bb84d022: Downloading  10.49MB/28.94MB[1B[1A[2Ke2d2bb84d022: Downloading  12.58MB/28.94MB[1B[1A[2Ke2d2bb84d022: Downloading  13.63MB/28.94MB[1B
+[1A[2K2238dc1b4376: Downloading  1.049MB/1.939MB[1B[2A[2Ke2d2bb84d022: Downloading  15.73MB/28.94MB[2B[1A[2K2238dc1b4376: Download complete [1B[2A[2Ke2d2bb84d022: Downloading  16.78MB/28.94MB[2B[2A[2Ke2d2bb84d022: Downloading  18.87MB/28.94MB[2B[2A[2Ke2d2bb84d022: Downloading  19.92MB/28.94MB[2B[2A[2Ke2d2bb84d022: Downloading  22.02MB/28.94MB[2B[2A[2Ke2d2bb84d022: Downloading  24.12MB/28.94MB[2B[2A[2Ke2d2bb84d022: Downloading  25.17MB/28.94MB[2B[2A[2Ke2d2bb84d022: Downloading  26.21MB/28.94MB[2B[2A[2Ke2d2bb84d022: Downloading  28.31MB/28.94MB[2B[2A[2Ke2d2bb84d022: Download complete [2B[2A[2Ke2d2bb84d022: Extracting 1 s[2B[2A[2Ke2d2bb84d022: Extracting 1 s[2B[2A[2Ke2d2bb84d022: Extracting 1 s[2B[2A[2Ke2d2bb84d022: Extracting 1 s[2B[2A[2Ke2d2bb84d022: Extracting 1 s[2B[2A[2Ke2d2bb84d022: Extracting 1 s[2B[2A[2Ke2d2bb84d022: Pull complete [2BDigest: sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852
+Status: Downloaded newer image for ubuntu:24.04
+[?2004h]0;root@96acd629ce15: /root@96acd629ce15:/# pwd
+[?2004l/
+[?2004h]0;root@96acd629ce15: /root@96acd629ce15:/# ls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mmedia[0m  [01;34mopt[0m   [01;34mroot[0m  [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34metc[0m  [01;36mlib[0m   [01;34mmnt[0m    [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m   [30;42mtmp[0m  [01;34mvar[0m
+[?2004h]0;root@96acd629ce15: /root@96acd629ce15:/# echo 'Heelo     llo from Ubuntu'
+[?2004lHello from Ubuntu
+[?2004h]0;root@96acd629ce15: /root@96acd629ce15:/# cat /etc/os-release
+[?2004lPRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+[?2004h]0;root@96acd629ce15: /root@96acd629ce15:/# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004hddocker ps -a[?2004l
+CONTAINER ID   IMAGE          COMMAND    CREATED          STATUS                     PORTS     NAMES
+96acd629ce15   ubuntu:24.04   "bash"     39 seconds ago   Exited (0) 9 seconds ago             codyssey-ubuntu
+f645ea55703a   hello-world    "/hello"   2 minutes ago    Exited (0) 2 minutes ago             codyssey-hello
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker start cod[7my[7mssey-ubuntu[27m[K[A[30C[27md[27mo[27mc[27mk[27me[27mr[27m [27ms[27mt[27ma[27mr[27mt[27m [27mc[27mo[27mdy[27ms[27ms[27me[27my[27m-[27mu[27mb[27mu[27mn[27mt[27mu[?2004l
+codyssey-ubuntu
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker ps[27m[9D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[?2004l
+CONTAINER ID   IMAGE          COMMAND   CREATED              STATUS         PORTS     NAMES
+96acd629ce15   ubuntu:24.04   "bash"    About a minute ago   Up 9 seconds             codyssey-ubuntu
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker attach co[7md[7myssey-ubuntu[27m[K[A[29C[27md[27mo[27mc[27mk[27me[27mr[27m [27ma[27mt[27mt[27ma[27mc[27mh[27m [27mc[27mod[27my[27ms[27ms[27me[27my[27m-[27mu[27mb[27mu[27mn[27mt[27mu[?2004l
+[K]0;root@96acd629ce15: /root@96acd629ce15:/# [K]0;root@96acd629ce15: /root@96acd629ce15:/# echo 'Attached to the main shell'
+[?2004lAttached to the main shell
+[?2004h]0;root@96acd629ce15: /root@96acd629ce15:/# [Kread escape sequence
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker ps[27m[9D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[?2004l
+CONTAINER ID   IMAGE          COMMAND   CREATED              STATUS          PORTS     NAMES
+96acd629ce15   ubuntu:24.04   "bash"    About a minute ago   Up 51 seconds             codyssey-ubuntu
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker exec -it [7mc[7modyssey-ubuntu bash[27m[K[A[22C[27md[27mo[27mc[27mk[27me[27mr[27m [27me[27mx[27me[27mc[27m [27m-[27mi[27mt[27m c[27mo[27md[27my[27ms[27ms[27me[27my[27m-[27mu[27mb[27mu[27mn[27mt[27mu[27m [27mb[27ma[27ms[27mh[?2004l
+[?2004h]0;root@96acd629ce15: /root@96acd629ce15:/# [7mecho 'Inside a separate shell'[27mecho 'Inside a separate shell'
+[?2004lInside a separate shell
+[?2004h]0;root@96acd629ce15: /root@96acd629ce15:/# [Kexit
+[?2004lexit
+
+[1mWhat's next:[0m
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → [36mdocker debug codyssey-ubuntu[0m
+    Learn more at https://docs.docker.com/go/debug-cli/
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004hddocker ps[?2004l
+CONTAINER ID   IMAGE          COMMAND   CREATED         STATUS              PORTS     NAMES
+96acd629ce15   ubuntu:24.04   "bash"    2 minutes ago   Up About a minute             codyssey-ubuntu
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mroot@96acd629ce1[7m5[7m:/# echo 'Inside a separate shell'[27m[K
+[7mInside a separate shell[27m[K
+[7mroot@96acd629ce15:/# exit[27m[K
+[7mexit[27m[K
+[K
+[7mWhat's next:[27m[K
+[7m    Try Docker Debug for seamless, persistent debugging to[7mo[7mls in any container or image → docker debug codyssey-ubun[7mt[7mu[27m[K
+[7m    Learn more at https://docs.docker.com/go/debug-cli/[27m[K
+[7mminjyuus@gimminjuui-MacBookPro codyssey % docker ps[27m[K
+[7mCONTAINER ID   IMAGE          COMMAND   CREATED         ST[7mA[7mTUS              PORTS     NAMES[27m[K
+[7m96acd629ce15   ubuntu:24.04   "bash"    2 minutes ago   Up[7m [7mAbout a minute    [27m[K[15A[23C[27mr[27mo[27mo[27mt[27m@[27m9[27m6[27ma[27mc[27md[27m6[27m2[27m9[27mc[27me[27m15[27m:[27m/[27m#[27m [27me[27mc[27mh[27mo[27m [27m'[27mI[27mn[27ms[27mi[27md[27me[27m [27ma[27m [27ms[27me[27mp[27ma[27mr[27ma[27mt[27me[27m [27ms[27mh[27me[27ml[27ml[27m'[1B[27mI[27mn[27ms[27mi[27md[27me[27m [27ma[27m [27ms[27me[27mp[27ma[27mr[27ma[27mt[27me[27m [27ms[27mh[27me[27ml[27ml[1B[27mr[27mo[27mo[27mt[27m@[27m9[27m6[27ma[27mc[27md[27m6[27m2[27m9[27mc[27me[27m1[27m5[27m:[27m/[27m#[27m [27me[27mx[27mi[27mt[1B[27me[27mx[27mi[27mt[2B[27mW[27mh[27ma[27mt[27m'[27ms[27m [27mn[27me[27mx[27mt[27m:[1B[27m [27m [27m [27m [27mT[27mr[27my[27m [27mD[27mo[27mc[27mk[27me[27mr[27m [27mD[27me[27mb[27mu[27mg[27m [27mf[27mo[27mr[27m [27ms[27me[27ma[27mm[27ml[27me[27ms[27ms[27m,[27m [27mp[27me[27mr[27ms[27mi[27ms[27mt[27me[27mn[27mt[27m [27md[27me[27mb[27mu[27mg[27mg[27mi[27mn[27mg[27m [27mt[27moo[27ml[27ms[27m [27mi[27mn[27m [27ma[27mn[27my[27m [27mc[27mo[27mn[27mt[27ma[27mi[27mn[27me[27mr[27m [27mo[27mr[27m [27mi[27mm[27ma[27mg[27me[27m [27m→[27m [27md[27mo[27mc[27mk[27me[27mr[27m [27md[27me[27mb[27mu[27mg[27m [27mc[27mo[27md[27my[27ms[27ms[27me[27my[27m-[27mu[27mb[27mu[27mnt[27mu[1B[27m [27m [27m [27m [27mL[27me[27ma[27mr[27mn[27m [27mm[27mo[27mr[27me[27m [27ma[27mt[27m [27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27md[27mo[27mc[27ms[27m.[27md[27mo[27mc[27mk[27me[27mr[27m.[27mc[27mo[27mm[27m/[27mg[27mo[27m/[27md[27me[27mb[27mu[27mg[27m-[27mc[27ml[27mi[27m/[1B[27mm[27mi[27mn[27mj[27my[27mu[27mu[27ms[27m@[27mg[27mi[27mm[27mm[27mi[27mn[27mj[27mu[27mu[27mi[27m-[27mM[27ma[27mc[27mB[27mo[27mo[27mk[27mP[27mr[27mo[27m [27mc[27mo[27md[27my[27ms[27ms[27me[27my[27m [27m%[27m [27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[1B[27mC[27mO[27mN[27mT[27mA[27mI[27mN[27mE[27mR[27m [27mI[27mD[27m [27m [27m [27mI[27mM[27mA[27mG[27mE[27m [27m [27m [27m [27m [27m [27m [27m [27m [27m [27mC[27mO[27mM[27mM[27mA[27mN[27mD[27m [27m [27m [27mC[27mR[27mE[27mA[27mT[27mE[27mD[27m [27m [27m [27m [27m [27m [27m [27m [27m [27mS[27mTA[27mT[27mU[27mS[29P[14CPORTS[5CNAMES[K[1B[27m9[27m6[27ma[27mc[27md[27m6[27m2[27m9[27mc[27me[27m1[27m5[27m [27m [27m [27mu[27mb[27mu[27mn[27mt[27mu[27m:[27m2[27m4[27m.[27m0[27m4[27m [27m [27m [27m"[27mb[27ma[27ms[27mh[27m"[27m [27m [27m [27m [27m2[27m [27mm[27mi[27mn[27mu[27mt[27me[27ms[27m [27ma[27mg[27mo[27m [27m [27m [27mU[27mp [27mA[27mb[27mo[27mu[27mt[27m [27ma[27m [27mm[27mi[27mn[27mu[27mt[27me[K[4C[?2004l
+[0m[27m[24m[Jquote> [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker stats --n[7mo[7m-stream codyssey-ubuntu[27m[K[A[18C[27md[27mo[27mc[27mk[27me[27mr[27m [27ms[27mt[27ma[27mt[27ms[27m [27m-[27m-[27mno[27m-[27ms[27mt[27mr[27me[27ma[27mm[27m [27mc[27mo[27md[27my[27ms[27ms[27me[27my[27m-[27mu[27mb[27mu[27mn[27mt[27mu[?2004l
+CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT    MEM %     NET I/O         BLOCK I/O   PIDS
+96acd629ce15   codyssey-ubuntu   0.00%     1.91MiB / 3.825GiB   0.05%     1.17kB / 126B   0B / 0B     1
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker stop cody[7ms[7msey-ubuntu[27m[K[A[31C[27md[27mo[27mc[27mk[27me[27mr[27m [27ms[27mt[27mo[27mp[27m [27mc[27mo[27md[27mys[27ms[27me[27my[27m-[27mu[27mb[27mu[27mn[27mt[27mu[?2004l
+codyssey-ubuntu
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker ps[27m[9D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[?2004l
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004h[7mdocker ps -a[27m[12D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[27m [27m-[27ma[?2004l
+CONTAINER ID   IMAGE          COMMAND    CREATED         STATUS                        PORTS     NAMES
+96acd629ce15   ubuntu:24.04   "bash"     3 minutes ago   Exited (137) 11 seconds ago             codyssey-ubuntu
+f645ea55703a   hello-world    "/hello"   5 minutes ago   Exited (0) 5 minutes ago                codyssey-hello
+[1m[7m%[27m[1m[0m                                                          ]7;file://gimminjuui-MacBookPro.local/Users/minjyuus/codyssey/codyssey[0m[27m[24m[Jminjyuus@gimminjuui-MacBookPro codyssey % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Tue Nov  3 17:33:17 2026
