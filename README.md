@@ -495,3 +495,168 @@ docker exec codyssey-check-vol2 cat /data/proof.txt
 - 바인드 마운트는 개발 중 호스트 파일 변경을 바로 반영할 때 적합하다.
 - 볼륨은 컨테이너 교체와 독립적으로 유지할 데이터를 저장하는 데 사용한다.
 - Git commit은 로컬 이력 저장이고 push는 그 커밋을 원격 저장소에 전송하는 작업이다.
+
+## 12. 프로젝트 디렉토리 구성
+
+아래는 제출 파일을 기준으로 정리한 디렉토리 트리다.
+실제 `tree` 명령의 출력이 아니라 구조를 설명하기 위한 표기이며,
+Git 내부 관리 폴더인 `.git/`은 생략했다.
+
+```text
+codyssey/
+├── .gitignore
+├── README.md
+├── Dockerfile
+├── site/
+│   └── index.html
+├── terminal-practice/
+│   └── note.txt
+├── logs/
+│   ├── 01-terminal.txt
+│   ├── 02-docker.txt
+│   └── 03-web.txt
+└── evidence/
+    ├── git-config.png
+    ├── vscode-github.png
+    ├── vscode-source-control.png
+    └── web-8080.png
+```
+
+| 경로 | 목적 |
+|---|---|
+| `.gitignore` | `.DS_Store` 등 제출에 불필요한 파일을 Git 추적 대상에서 제외한다. |
+| `README.md` | 실행 환경, 수행 절차, 검증 결과, 증거 링크, 트러블슈팅을 설명한다. |
+| `Dockerfile` | 베이스 이미지와 웹 콘텐츠 복사 경로 등 커스텀 이미지의 빌드 방법을 정의한다. |
+| `site/` | 웹 서버가 제공할 소스 파일을 보관한다. Docker 빌드와 바인드 마운트의 대상으로 사용한다. |
+| `site/index.html` | 직접 작성한 웹 페이지다. Version 1에서 Version 2로 수정하여 변경 반영을 검증했다. |
+| `terminal-practice/` | 터미널의 파일 조작 및 권한 변경 실습에 사용한 작업 폴더다. |
+| `terminal-practice/note.txt` | 생성·내용 확인·복사·권한 변경 실습에 사용한 파일이다. |
+| `logs/` | 입력 명령과 실제 출력 결과를 기록한 원본 로그를 보관한다. |
+| `logs/01-terminal.txt` | 터미널 기본 조작과 파일·디렉토리 권한 변경 기록이다. |
+| `logs/02-docker.txt` | Docker 점검, 컨테이너 실행·종료, attach/exec, 로그·리소스 확인 기록이다. |
+| `logs/03-web.txt` | 웹 이미지 빌드, 포트 매핑, 바인드 마운트 및 볼륨 검증 기록이다. |
+| `evidence/` | 브라우저 접속과 Git·VSCode 연동 상태를 보여주는 스크린샷을 보관한다. |
+
+### 구성 기준
+
+- 실행 소스(`site/`), 실습 파일(`terminal-practice/`), 텍스트 증거(`logs/`), 시각적 증거(`evidence/`)를 분리했다.
+- 진입 문서인 README와 빌드 정의인 Dockerfile은 저장소 루트에 두었다.
+- README에서 상대 경로 링크로 증거에 접근하도록 구성했다.
+- 권한 실습에 사용한 `terminal-practice/permission-demo/`는 빈 디렉토리다.
+  Git은 빈 디렉토리를 추적하지 않으므로 위 제출 트리에는 표시하지 않았다.
+  해당 디렉토리의 생성과 권한 변경 증거는 `logs/01-terminal.txt`에 남아 있다.
+
+## 13. 포트 충돌 진단 및 대응 절차
+
+아래는 macOS에서 포트 충돌이 발생했을 때 사용할 대응 절차다.
+이번 실습에서 실제 포트 충돌을 재현하거나 해결했다는 기록은 아니다.
+
+### 1단계: 오류와 포트 매핑 확인
+
+컨테이너 실행 시 `port is already allocated` 또는
+`address already in use` 등의 오류가 나타나면,
+지정한 호스트 포트를 다른 프로그램이 사용 중인지 확인한다.
+
+예를 들어 다음 설정에서 확인할 호스트 포트는 8080이다.
+
+```bash
+docker run -d --name codyssey-port-check \
+  -p 127.0.0.1:8080:80 codyssey-web:1.0
+```
+
+8080은 Mac의 포트이고, 80은 컨테이너 내부의 포트다.
+서로 다른 컨테이너가 내부 포트 80을 사용하는 것은 가능하지만,
+동일한 호스트 주소와 포트를 중복해서 사용할 수는 없다.
+
+### 2단계: 포트를 사용하는 프로세스 확인
+
+```bash
+lsof -nP -iTCP:8080 -sTCP:LISTEN
+```
+
+출력의 COMMAND와 PID를 확인한다.
+결과가 없지만 충돌이 계속된다면 권한 문제를 확인하기 위해
+관리자 권한으로 다시 조회할 수 있다.
+
+```bash
+sudo lsof -nP -iTCP:8080 -sTCP:LISTEN
+```
+
+Docker Desktop 관련 프로세스가 표시되면 해당 프로세스를 바로 종료하지 않고,
+다음 단계에서 포트를 공개한 컨테이너를 확인한다.
+
+### 3단계: Docker 컨테이너의 포트 점유 확인
+
+```bash
+docker ps --format 'table {{.Names}}\t{{.Ports}}'
+```
+
+PORTS 열에서 `127.0.0.1:8080->80/tcp`,
+`0.0.0.0:8080->80/tcp` 등 호스트 8080을 사용하는 항목을 찾는다.
+
+필요하면 특정 컨테이너의 매핑을 확인한다.
+
+```bash
+docker port codyssey-web
+```
+
+### 4단계: 불필요한 실행을 종료하거나 다른 포트 선택
+
+**방법 A — 본인이 실행한 불필요한 컨테이너 중지**
+
+예를 들어 기존 `codyssey-web`이 포트를 사용 중이며
+더 이상 실행할 필요가 없을 때만 중지한다.
+
+```bash
+docker stop codyssey-web
+```
+
+일반 애플리케이션이 사용 중이면 해당 앱의 종료 기능이나,
+서버를 실행한 터미널의 Control+C로 종료한다.
+
+필요한 경우 다음 명령으로 PID의 정체를 먼저 확인한 뒤,
+본인이 실행한 종료 가능한 프로세스에만 정상 종료 신호를 보낸다.
+`12345`는 실제 확인한 PID로 바꿔야 한다.
+
+```bash
+ps -p 12345 -o pid,comm,args
+kill -TERM 12345
+```
+
+**방법 B — 기존 서비스를 유지하고 호스트 포트 변경**
+
+기존 서비스를 종료하면 안 되는 경우에는 사용 가능한 다른 포트를 선택한다.
+아래는 8082 사용 여부를 확인하고 새 컨테이너를 실행하는 예시다.
+
+```bash
+lsof -nP -iTCP:8082 -sTCP:LISTEN
+docker run -d --name codyssey-web-8082 \
+  -p 127.0.0.1:8082:80 codyssey-web:1.0
+```
+
+호스트 포트를 8082로 바꿔도 NGINX의 컨테이너 내부 포트는 80을 유지한다.
+컨테이너 이름도 기존 이름과 겹치지 않게 지정한다.
+
+포트 충돌로 실행에 실패한 컨테이너가 남아 있을 수 있으므로
+`docker ps -a`로 확인한다.
+앞에서 만든 실패한 실습용 컨테이너임을 확인한 경우에만 삭제 후 재실행한다.
+
+```bash
+docker ps -a
+docker rm codyssey-port-check
+```
+
+### 5단계: 해결 후 접속 재검증
+
+8082를 선택했다면 아래 명령으로 상태와 HTTP 응답을 확인한다.
+
+```bash
+docker ps
+curl -i http://127.0.0.1:8082
+```
+
+컨테이너가 실행 중이고 `200 OK` 및 웹 페이지 내용이 반환되는지 확인한다.
+브라우저에서도 변경한 포트로 접속한다.
+
+실제로 충돌을 처리했다면 오류 메시지, 점유 프로세스 또는 컨테이너,
+선택한 조치, 재검증 결과를 함께 기록한다.
